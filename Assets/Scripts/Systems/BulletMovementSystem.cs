@@ -51,7 +51,7 @@ namespace hatuxes.xyoxyoxyo
                 {
                     translation.Value += localToWorld.Forward * bulletTag.BulletSpeed * deltaTime;
 
-                }).ScheduleParallel();
+                }).ScheduleParallel(); // 分散並列スレッド処理
 
             // 自機狙い弾の動き
             Entities
@@ -60,7 +60,7 @@ namespace hatuxes.xyoxyoxyo
                 {
                     translation.Value += aimBulletTag.MoveDirection * bulletTag.BulletSpeed * deltaTime;
 
-                }).ScheduleParallel();
+                }).ScheduleParallel(); // 分散並列スレッド処理
 
             // 跳ね返る弾の動き
             Entities
@@ -86,7 +86,7 @@ namespace hatuxes.xyoxyoxyo
                         }
                     }
 
-                }).ScheduleParallel(); // 分散並列スレッド
+                }).ScheduleParallel(); // 分散並列スレッド処理
 
         }
     }

@@ -60,7 +60,7 @@ namespace hatuxes.xyoxyoxyo
                         commandBuffer.DestroyEntity(entity);
                     }
 
-                }).Run(); // メインスレッド
+                }).Run(); // メインスレッド処理
 
             // JobをCommandBufferで流し込む
             _entityCommandBufferSystem.AddJobHandleForProducer(Dependency);

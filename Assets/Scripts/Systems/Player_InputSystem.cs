@@ -42,7 +42,7 @@ namespace hatuxes.xyoxyoxyo
 
                     playerData.MoveSpeedMultiplier = Input.GetKey(KeyCode.LeftShift) ? 0.4f : 1.0f;
 
-                }).Run(); // メインスレッド
+                }).Run(); // メインスレッド処理
         }
     }
 }

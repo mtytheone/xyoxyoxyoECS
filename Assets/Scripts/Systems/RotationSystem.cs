@@ -30,7 +30,7 @@ namespace hatuxes.xyoxyoxyo
 
                     rotation.Value = math.mul(normalizedRotation, angleToRotate);
 
-                }).ScheduleParallel();
+                }).ScheduleParallel(); // 分散並列スレッド処理
         }
     }
 }

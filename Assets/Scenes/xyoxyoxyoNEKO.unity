@@ -525,7 +525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pauseCanvas: {fileID: 5376358584177706908}
-  _shotRate: 340
+  _shotRate: 5.5
 --- !u!4 &2008879377
 Transform:
   m_ObjectHideFlags: 0

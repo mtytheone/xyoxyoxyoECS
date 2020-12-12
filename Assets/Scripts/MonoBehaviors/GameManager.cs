@@ -21,10 +21,16 @@ namespace hatuxes.xyoxyoxyo
     {
         public static GameManager Instance { get; private set; }
 
-        public uint ShotRate => _shotRate;
+        public float ShotRate
+        {
+            get
+            {
+                return _shotRate > 0 ? _shotRate : 0;
+            }
+        }
 
         [SerializeField] private Canvas _pauseCanvas;
-        [SerializeField] private uint _shotRate;
+        [SerializeField] private float _shotRate;
 
         private bool _isEnable = true;
 

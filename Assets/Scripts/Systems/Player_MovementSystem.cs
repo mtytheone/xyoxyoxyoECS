@@ -52,7 +52,7 @@ namespace hatuxes.xyoxyoxyo
                     translation.Value.x = math.clamp(translation.Value.x, _lowerLeft.x, _upperRight.x);
                     translation.Value.y = math.clamp(translation.Value.y, _lowerLeft.y, _upperRight.y);
 
-                }).Run(); // メインスレッド
+                }).Run(); // メインスレッド処理
         }
     }
 }

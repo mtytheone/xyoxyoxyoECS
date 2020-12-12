@@ -23,7 +23,7 @@ namespace hatuxes.xyoxyoxyo
     {
         private BeginSimulationEntityCommandBufferSystem _entityCommandBufferSystem;
 
-        private uint _interval;
+        private float _interval;
 
         protected override void OnCreate()
         {
@@ -36,7 +36,7 @@ namespace hatuxes.xyoxyoxyo
             // コマンドバッファを取得
             var commandBuffer = _entityCommandBufferSystem.CreateCommandBuffer();
 
-            // 60フレームのうちn回弾を発射する
+            // 指定した秒数間隔で弾を発射する
             if (_interval > GameManager.Instance.ShotRate)
             {
                 Entities
@@ -120,7 +120,7 @@ namespace hatuxes.xyoxyoxyo
                             });
                         }
 
-                    }).Run(); // メインスレッド
+                    }).Run(); // メインスレッド処理
 
                 // JobをCommandBufferで流し込む
                 _entityCommandBufferSystem.AddJobHandleForProducer(Dependency);
@@ -128,7 +128,8 @@ namespace hatuxes.xyoxyoxyo
                 _interval = 0;
             }
 
-            _interval++;
+            // 経過時間を反映
+            _interval += Time.DeltaTime;
         }
     }
 }
