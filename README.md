@@ -3,7 +3,7 @@
 [![License:MIT](https://img.shields.io/badge/License-MIT-819FF7.svg)](https://choosealicense.com/licenses/mit/)
 
 ## About - 概要
-これはU#の解説記事のために作ったサンプルプロジェクトです。
+これはECSの解説記事のために作ったサンプルプロジェクトです。
 解説記事自体は[こちら](https://hatuxes.hatenablog.jp/entry/2020/12/17/011454)になります。
 
 
